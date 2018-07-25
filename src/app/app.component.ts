@@ -11,11 +11,15 @@ import { AnalyticsService } from './@core/utils/analytics.service';
 export class AppComponent implements OnInit {
   constructor(
     public electronService: ElectronService,
-    private translate: TranslateService,
+    public translate: TranslateService,
     private analytics: AnalyticsService
   ) {
 
+    translate.addLangs(['en', 'fr', 'cn']);
     translate.setDefaultLang('en');
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|fr|cn/) ? browserLang : 'en');
+
     console.log('AppConfig', AppConfig);
 
     if (electronService.isElectron()) {

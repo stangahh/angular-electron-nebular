@@ -49,6 +49,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
+  exports: [TranslateModule],
   providers: [
     ElectronService,
     { provide: APP_BASE_HREF, useValue: '/' }
