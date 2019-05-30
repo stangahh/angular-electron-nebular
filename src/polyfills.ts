@@ -67,11 +67,6 @@ import 'core-js/es7/reflect';
 */
 // (window as any).__Zone_enable_cross_context_check = true;
 
-/***************************************************************************************************
- * Zone JS is required by default for Angular itself.
- */
-import 'zone.js/dist/zone';  // Included with Angular CLI.
-
 /**
  * You can load zone-patch-electron to allow electron native APIs
  * (Such as dialog/shortcut/menu/getFileIcon/shell/session/
