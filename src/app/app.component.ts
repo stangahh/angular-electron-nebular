@@ -10,22 +10,17 @@ import { AnalyticsService } from './@core/utils/analytics.service';
 })
 export class AppComponent implements OnInit {
   constructor(
-    public electronService: ElectronService,
-    public translate: TranslateService,
+    private electronService: ElectronService,
+    private translate: TranslateService,
     private analytics: AnalyticsService
   ) {
 
-    translate.addLangs(['en', 'fr', 'cn']);
-    translate.setDefaultLang('en');
-    const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/en|fr|cn/) ? browserLang : 'en');
+    this.translate.setDefaultLang('en');
 
-    console.log('AppConfig', AppConfig);
-
-    if (electronService.isElectron()) {
+    if (this.electronService.isElectron()) {
       console.log('Mode electron');
-      console.log('Electron ipcRenderer', electronService.ipcRenderer);
-      console.log('NodeJS childProcess', electronService.childProcess);
+      console.log('Electron ipcRenderer', this.electronService.ipcRenderer);
+      console.log('NodeJS childProcess', this.electronService.childProcess);
     } else {
       console.log('Mode web');
     }

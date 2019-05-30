@@ -38,7 +38,7 @@ Note that you can't use Electron or NodeJS native libraries in this case. Please
 ## To build for development
 
 ``` bash
-npm start
+npm start:electron
 ```
 
 Voila! You can use your Angular + Electron app in a local development environment with hot reload !
@@ -51,7 +51,7 @@ You can deactivate "Developer Tools" by commenting `win.webContents.openDevTools
 
 |Command|Description|
 |--|--|
-|`npm run ng:serve:web`| Execute the app in the browser |
+|`npm run start`| Execute the app in the browser |
 |`npm run build`| Build the app. Your built files are in the /dist folder. |
 |`npm run build:prod`| Build the app with Angular aot. Your built files are in the /dist folder. |
 |`npm run electron:local`| Builds your application and start electron

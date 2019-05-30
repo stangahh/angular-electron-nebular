@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Social, socials } from '../../../constants';
 
 @Component({
   selector: 'ngx-footer',
   styleUrls: ['./footer.component.scss'],
   template: `
-    <span class="created-by">Created with ♥ by <b><a href="https://akveo.com" target="_blank">Akveo</a></b> 2017</span>
     <div class="socials">
-      <a href="#" target="_blank" class="ion ion-social-github"></a>
-      <a href="#" target="_blank" class="ion ion-social-facebook"></a>
-      <a href="#" target="_blank" class="ion ion-social-twitter"></a>
-      <a href="#" target="_blank" class="ion ion-social-linkedin"></a>
+      <a *ngFor="let social of socials" [href]="social.url" target="_blank" [ngClass]="social.classes"></a>
     </div>
   `,
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
+  socials: Social[];
+
+  ngOnInit() {
+    this.socials = socials;
+  }
 }
