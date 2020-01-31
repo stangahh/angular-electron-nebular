@@ -109,7 +109,7 @@
     "codelyzer": "4.2.1",
     "core-js": "2.5.6",
     "echarts": "^4.0.2",
-    "electron": "2.0.3",
+    "electron": "7.1.11",
     "electron-builder": "20.14.7",
     "electron-reload": "1.2.2",
     "font-awesome": "4.7.0",
