@@ -141,7 +141,7 @@
     "rxjs-compat": "^6.1.0",
     "socicon": "3.0.5",
     "stylelint": "7.13.0",
-    "tinymce": "5.2.2",
+    "tinymce": "5.4.1",
     "ts-node": "6.0.3",
     "tslint": "5.10.0",
     "tslint-language-service": "0.9.6",
